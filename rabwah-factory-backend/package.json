@@ -1,7 +1,7 @@
 {
   "name": "rabwah-factory-backend",
   "version": "1.0.0",
-  "description": "Backend API for Rabwah Factory — includes authentication, role-based access control, and CRUD for staff and customers.",
+  "description": "Backend API for Rabwah Factory — includes authentication, role-based access control, and CRUD for staff, salaries, expenses, and customers.",
   "main": "src/server.js",
   "type": "module",
   "scripts": {
@@ -37,5 +37,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=18.x"
   }
 }
