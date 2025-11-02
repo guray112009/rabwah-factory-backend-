@@ -8,7 +8,7 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "seed": "node src/seed/seedAdmin.js",
-    "test": "echo \"No tests configured yet\" && exit 0"
+    "render-postbuild": "echo '✅ Render postbuild complete'"
   },
   "keywords": [
     "express",
@@ -40,5 +40,9 @@
   },
   "engines": {
     "node": ">=18.x"
+  },
+  "render": {
+    "buildCommand": "npm install",
+    "startCommand": "npm run start"
   }
 }
