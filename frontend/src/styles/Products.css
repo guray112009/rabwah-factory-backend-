@@ -1,0 +1,300 @@
+/* 🌿 Products Page — Rabwah Bags */
+.products-hero {
+  position: relative;
+  height: 60vh;
+  background: linear-gradient(
+      rgba(35, 90, 38, 0.6),
+      rgba(35, 90, 38, 0.8)
+    ),
+    url("../assets/images/green-leaf-bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-content {
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px 30px;
+  border-radius: 12px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #e8f5e9;
+  line-height: 1.6;
+}
+
+/* 👜 Product Grid Section */
+.products-gallery {
+  background-color: #f7fdf7;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h3 {
+  color: #2e7d32;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+}
+
+/* 🌿 Lightbox Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.4s ease;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  padding: 30px 25px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.4s ease;
+}
+
+.modal-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-content h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.modal-content p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #66bb6a;
+  transform: rotate(90deg);
+}
+
+/* 🌿 Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 🌿 Enhanced Modal with Feature List & Quote Button */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.4s ease;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 520px;
+  width: 90%;
+  padding: 35px 30px 45px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.4s ease;
+}
+
+.modal-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-content h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.modal-desc {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* 🌿 Feature list */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  color: #2e7d32;
+  margin: 15px 0 25px;
+}
+
+.feature-list li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+/* 🌿 Request Quote Form Styles */
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 15px;
+}
+
+.quote-form input,
+.quote-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #a5d6a7;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.quote-form input:focus,
+.quote-form textarea:focus {
+  border-color: #2e7d32;
+}
+
+.quote-form textarea {
+  resize: none;
+}
+
+/* Buttons (reuse) */
+.quote-btn {
+  background-color: #81c784;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quote-btn:hover {
+  background-color: #66bb6a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(102, 187, 106, 0.3);
+}

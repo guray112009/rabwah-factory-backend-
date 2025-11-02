@@ -1,0 +1,490 @@
+/* 🌿 Manager Dashboard Layout */
+.manager-dashboard {
+  font-family: "Poppins", sans-serif;
+  color: #1c1c1c;
+  padding: 20px;
+  background: #f8fdf8;
+}
+
+/* 🔔 Alerts */
+.alert-banner {
+  text-align: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.alert-banner.success {
+  background-color: #d4f8e8;
+  color: #007a33;
+  border: 1px solid #a8e6b5;
+}
+
+.alert-banner.error {
+  background-color: #ffeaea;
+  color: #b50000;
+  border: 1px solid #ffb4b4;
+}
+
+/* 🌟 Header Section */
+.manager-header {
+  background: linear-gradient(135deg, #007a33, #009e60);
+  color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 122, 51, 0.2);
+  margin-bottom: 40px;
+}
+
+.manager-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.manager-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* 📋 Section Titles */
+.manager-section h2,
+.staff-section h2,
+.task-section h2,
+.chart-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #004b23;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.manager-section h2::before {
+  content: "📄";
+}
+
+.staff-section h2::before {
+  content: "👥";
+}
+
+.task-section h2::before {
+  content: "🧾";
+}
+
+/* 🧱 Section Container */
+.manager-section,
+.staff-section,
+.task-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 35px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 🧍 Staff / User Table */
+.staff-table,
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.staff-table th,
+.task-table th {
+  background: #007a33;
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.staff-table td,
+.task-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+  font-size: 0.9rem;
+}
+
+.staff-table tr:hover,
+.task-table tr:hover {
+  background-color: #f5faf5;
+}
+
+/* 🟩 Buttons General */
+button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-right: 5px;
+}
+
+/* 🎨 Button Types */
+.add-btn {
+  background: #007a33;
+  color: white;
+}
+.add-btn:hover {
+  background: #009e60;
+}
+
+.edit-btn {
+  background: #f4c542;
+  color: #333;
+}
+.edit-btn:hover {
+  background: #ffda68;
+}
+
+.toggle-btn {
+  background: #007aff;
+  color: white;
+}
+.toggle-btn:hover {
+  background: #339aff;
+}
+
+.delete-btn {
+  background: #b50000;
+  color: white;
+}
+.delete-btn:hover {
+  background: #d92626;
+}
+
+.complete-btn {
+  background: #007a33;
+  color: white;
+}
+.complete-btn:hover {
+  background: #009e60;
+}
+
+.assign-btn {
+  background: #4caf50;
+  color: white;
+}
+.assign-btn:hover {
+  background: #2e7d32;
+}
+
+/* 🟨 Role Badges */
+.role-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.role-badge.staff {
+  background: #009e60;
+}
+.role-badge.manager {
+  background: #004b23;
+}
+.role-badge.customer {
+  background: #f4c542;
+  color: #1c1c1c;
+}
+
+/* 🟢 Status Badges */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+.status-badge.active {
+  background: #d4f8e8;
+  color: #007a33;
+}
+.status-badge.inactive {
+  background: #ffeaea;
+  color: #b50000;
+}
+.status-badge.done {
+  background: #c8f7d1;
+  color: #007a33;
+}
+.status-badge.pending {
+  background: #fff8e1;
+  color: #e67e00;
+}
+
+/* 📊 Charts Section */
+.chart-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.chart-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 🧾 Task Form */
+.task-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.task-form input,
+.task-form select {
+  flex: 1 1 180px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.add-task-btn {
+  background: #007a33;
+  color: white;
+  font-weight: 500;
+}
+.add-task-btn:hover {
+  background: #009e60;
+}
+
+/* 📤 Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 25px 30px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+  color: #004b23;
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.modal-content select,
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.save-btn {
+  background: #007a33;
+  color: white;
+  font-weight: 500;
+}
+.save-btn:hover {
+  background: #009e60;
+}
+
+.cancel-btn {
+  background: #b50000;
+  color: white;
+}
+.cancel-btn:hover {
+  background: #d92626;
+}
+
+/* 💰 EMPLOYEE SALARY SECTION */
+.salary-section {
+  background: #f6fff8;
+  border-radius: 12px;
+  padding: 40px;
+  margin-top: 60px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #d9f2e6;
+}
+
+/* Section title */
+.salary-section h2 {
+  color: #007a33;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+}
+
+.salary-section p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Salary form styling */
+.employee-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.employee-form input,
+.employee-form select {
+  flex: 1 1 180px;
+  padding: 10px 12px;
+  border: 1px solid #cce3d4;
+  border-radius: 6px;
+  background: white;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.employee-form input:focus,
+.employee-form select:focus {
+  border-color: #007a33;
+  outline: none;
+}
+
+/* Buttons inside salary form */
+.employee-form button {
+  background: #007a33;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.employee-form button:hover {
+  background: #009e60;
+}
+
+/* Download button */
+.download-btn {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  background: #004b23;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.download-btn:hover {
+  background: #007a33;
+}
+
+/* 🧾 Employee Records Table */
+.employee-section {
+  margin-top: 20px;
+}
+
+.employee-section h3 {
+  color: #004b23;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.employee-section h3::before {
+  content: "📋";
+}
+
+.employee-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Table header */
+.employee-section th {
+  background: #007a33;
+  color: white;
+  padding: 12px 10px;
+  font-weight: 500;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+/* Table cells */
+.employee-section td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e7f3ea;
+  font-size: 0.92rem;
+  color: #222;
+}
+
+/* Align salary, month, contact nicely */
+.employee-section td:nth-child(3) {
+  text-align: right; /* Salary column */
+  font-weight: 600;
+}
+.employee-section td:nth-child(4) {
+  text-align: center; /* Month column */
+  color: #004b23;
+}
+.employee-section td:nth-child(5) {
+  text-align: center; /* Contact column */
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+/* Table row hover */
+.employee-section tr:hover {
+  background: #f6fdf7;
+}
+
+/* Delete button inside table */
+.employee-section .delete-btn {
+  background: #b50000;
+  color: white;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
+.employee-section .delete-btn:hover {
+  background: #d92626;
+}

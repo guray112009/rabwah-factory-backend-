@@ -1,0 +1,360 @@
+/* 🌿 Hero Section with rotating backgrounds */
+.hero {
+  position: relative;
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  transition: background-image 1.5s ease-in-out;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 50px 30px;
+  border-radius: 12px;
+  max-width: 750px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* 🌿 Animated Eco Message */
+.eco-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #a5d6a7;
+  margin-bottom: 1rem;
+  transition: opacity 0.8s ease;
+  animation: fadeText 3s ease infinite;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e8f5e9;
+}
+
+/* 🌿 Explore Button */
+.shop-btn {
+  background-color: #81c784;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: #66bb6a;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(102, 187, 106, 0.4);
+}
+
+/* 👜 Product Preview Section */
+.products-preview {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #f7fdf7;
+}
+
+.products-preview h2 {
+  font-size: 2.2rem;
+  color: #245c29;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* 🧱 Bag Grid */
+.bag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 35px;
+  justify-items: center;
+}
+
+.bag-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-decoration: none;
+  color: #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 260px;
+}
+
+.bag-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bag-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.bag-card h3 {
+  margin: 15px 0;
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeText {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* 🌈 Responsive */
+@media (max-width: 992px) {
+  .hero-overlay h1 {
+    font-size: 2.4rem;
+  }
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-overlay {
+    padding: 30px 15px;
+  }
+  .hero-overlay h1 {
+    font-size: 1.8rem;
+  }
+  .eco-message {
+    font-size: 1.2rem;
+  }
+  .bag-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 🏭 About Preview */
+.about-preview {
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #f8fff8;
+  color: #2e7d32;
+}
+
+.about-text h2 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  max-width: 800px;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.learn-btn {
+  background: #2e7d32;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.learn-btn:hover {
+  background: #388e3c;
+}
+
+.about-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.about-icons img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s;
+}
+
+.about-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* 💚 Why Choose Us */
+.why-us {
+  padding: 80px 10%;
+  background: linear-gradient(to bottom, #e8f5e9, #f1f8e9);
+  text-align: center;
+}
+
+.why-us h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #2e7d32;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-card h3 {
+  margin: 12px 0 8px;
+  color: #388e3c;
+}
+
+.feature-card p {
+  color: #4b604b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.feature-card svg {
+  color: #2e7d32;
+}
+
+/* 🧩 Responsive */
+@media (max-width: 768px) {
+  .about-icons img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+}
+/* 🌍 Trust Section */
+.trust-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f8fff8;
+  color: #2e7d32;
+  font-family: "Poppins", sans-serif;
+}
+
+.trust-section h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1b5e20;
+  margin-bottom: 15px;
+}
+
+.trust-section p {
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  color: #33691e;
+}
+
+.trust-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 35px;
+  justify-items: center;
+}
+
+.trust-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  width: 100%;
+  max-width: 260px;
+}
+
+.trust-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.trust-card h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.trust-card p {
+  font-size: 0.95rem;
+  color: #33691e;
+}
+
+/* ✨ Hover Effect */
+.trust-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
+}
+
+.trust-card:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(76, 175, 80, 0.5));
+}
+
+
+

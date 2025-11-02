@@ -1,0 +1,90 @@
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #007a33 0%, #005a26 100%);
+  font-family: "Poppins", sans-serif;
+}
+
+.register-container {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.register-logo {
+  width: 90px;
+  margin-bottom: 1rem;
+}
+
+.register-container h1 {
+  color: #007a33;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.register-subtext {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* INPUT FIELDS */
+.register-form input,
+.register-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.role-select {
+  background: #f7f7f7;
+}
+
+/* BUTTON */
+.btn {
+  width: 100%;
+  background-color: #007a33;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #005a26;
+}
+
+/* ALERT */
+.register-alert {
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.register-alert.success {
+  background-color: #d4f8d4;
+  color: #007a33;
+  border: 1px solid #007a33;
+}
+.register-alert.error {
+  background-color: #ffe2e2;
+  color: #b50000;
+  border: 1px solid #b50000;
+}
+
+.notice {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}

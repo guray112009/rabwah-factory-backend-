@@ -1,0 +1,70 @@
+/* 🌿 Global Styles for Rabwah Bags */
+
+/* ✅ Base Setup */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f7fdf7; /* soft eco-friendly green background */
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ✅ Main Content Area */
+.main-content {
+  min-height: 80vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ✅ Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ✅ Layout Structure */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f7fdf7;
+  color: #222;
+}
+
+.layout-content {
+  flex: 1;
+  padding: 40px 10%;
+  box-sizing: border-box;
+}
+
+/* ✅ Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+/* ✅ Reusable Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #2e7d32; /* eco green */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #256428;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .layout-content {
+    padding: 20px;
+  }
+
+  .btn {
+    padding: 8px 14px;
+  }
+}

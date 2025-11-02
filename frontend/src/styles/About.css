@@ -1,0 +1,360 @@
+/* 🌿 About Page Styles */
+
+.about-hero {
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 50px 25px;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.about-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* 🌍 Our Story Section */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 40px;
+  background-color: #f7fdf7;
+}
+
+.about-text {
+  flex: 1 1 500px;
+}
+
+.about-text h2 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.about-text p {
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  flex: 1 1 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ♻️ Mission & Values */
+.about-values {
+  background-color: #e8f5e9;
+  text-align: center;
+  padding: 80px 10%;
+}
+
+/* 🕒 Company Journey Timeline */
+.about-timeline {
+  background-color: #f7fdf7;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.about-timeline h2 {
+  color: #1b5e20;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background-color: #a5d6a7;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background-color: #2e7d32;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 8px;
+}
+
+.timeline-content {
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  width: 45%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  align-self: flex-end;
+}
+
+.timeline-content h3 {
+  color: #2e7d32;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-dot {
+    left: 10px;
+    transform: none;
+  }
+
+  .timeline-content {
+    width: 100%;
+    margin-left: 30px;
+  }
+}
+
+
+.about-values h2 {
+  color: #1b5e20;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.about-values p {
+  color: #444;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.value-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.value-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-card h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* 🖼️ Gallery */
+.about-gallery {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #f7fdf7;
+}
+
+.about-gallery h2 {
+  margin-bottom: 30px;
+  color: #1b5e20;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-grid img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 💚 CTA Section */
+.about-cta {
+  text-align: center;
+  background: #2e7d32;
+  color: white;
+  padding: 70px 20px;
+}
+
+.about-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-cta p {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  background-color: #f4c542;
+  color: #1b5e20;
+  padding: 12px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #ffeb3b;
+  transform: translateY(-2px);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+}
+/* 👥 Leadership Team Section */
+.about-team {
+  background-color: #e8f5e9;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.about-team h2 {
+  color: #1b5e20;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.team-intro {
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.team-member {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.team-member img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  color: #2e7d32;
+  margin-bottom: 5px;
+}
+
+.team-member .role {
+  font-weight: 600;
+  color: #4caf50;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .team-member {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+

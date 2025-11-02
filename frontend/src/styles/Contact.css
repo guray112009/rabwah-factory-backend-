@@ -1,0 +1,171 @@
+/* 🌿 Contact Page */
+.contact-page {
+  background: linear-gradient(to bottom right, #f1f8e9, #ffffff);
+  padding: 80px 10%;
+  font-family: "Poppins", sans-serif;
+  color: #2e7d32;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1b5e20;
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  font-size: 1.1rem;
+  color: #33691e;
+  margin-bottom: 40px;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+/* 🌿 Info Section */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  background: #e8f5e9;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  font-size: 1.8rem;
+  color: #1b5e20;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1.05rem;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-info .icon {
+  color: #43a047;
+}
+
+/* 🌿 Social Media */
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  font-size: 1.6rem;
+  color: #2e7d32;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #66bb6a;
+  transform: scale(1.1);
+}
+
+/* ✉️ Contact Form */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.contact-form h2 {
+  font-size: 1.8rem;
+  color: #1b5e20;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #c8e6c9;
+  border-radius: 6px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #43a047;
+  box-shadow: 0 0 6px rgba(67, 160, 71, 0.3);
+}
+
+.send-btn {
+  background: #43a047;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.send-btn:hover {
+  background: #2e7d32;
+  transform: translateY(-2px);
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
+
+/* 🗺️ Google Map Section */
+.map-section {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.map-section h2 {
+  font-size: 2rem;
+  color: #1b5e20;
+  margin-bottom: 25px;
+}
+
+.map-section iframe {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+}
